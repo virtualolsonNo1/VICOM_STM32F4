@@ -1,5 +1,5 @@
 # VICOM DESCRIPTION
-- This is a communications protocol I wrote for my job (VICOM standing for VI Communications protocol) using UART and DMA to communicate with different nodes on the robot. I've now written it for Nuvoton, SAM G, and ST microcontrollers, with this being the most recent ST example.
+- This is a communications protocol I wrote for my job (VICOM standing for VI Communications protocol) using UART and DMA to communicate with different nodes on the robot on an STM32F411 microcontroller. I've now written it for Nuvoton, SAM G, and ST microcontrollers, with this being the most recent ST example.
 
 # HOW IT WORKS
 - This comms protocol is meant to successfully transfer the correct state struct. To do so, UART, DMA, protocol buffers, and CRC checks were used to send and error-check the data being transmitted and received. Additionally, address mark detection was used to allow the slaves to wait in mute mode until an address bit (the MSB) of 1 is received, not wasting unnecessary CPU time on processing unnecessary data received over the comms bus to all of the slaves. 
